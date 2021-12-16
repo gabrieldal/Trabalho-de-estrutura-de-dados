@@ -2,7 +2,7 @@
 Gabriel Dalmazo Dambros
 Matícula 2110103375
 Trabalho 1 de Estrutura de Dados - Ponteiros e alocação dinâmica de memória
-Professor Milton Roberto Heinen
+gabrieldambros.aluno@unipampa.edu.br
 */
 
 #include<stdio.h>
