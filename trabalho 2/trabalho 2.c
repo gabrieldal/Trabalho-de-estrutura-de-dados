@@ -1,3 +1,10 @@
+/*  
+Gabriel Dalmazo Dambros
+Matícula 2110103375
+Trabalho 2 de Estrutura de Dados - Listas Encadeadas
+gabrieldambros.aluno@unipampa.edu.br
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
