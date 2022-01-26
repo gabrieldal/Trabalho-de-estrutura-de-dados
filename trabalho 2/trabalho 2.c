@@ -27,7 +27,7 @@ int main()
             }
             break;
         case 2:
-            
+
             print_node(head);
             break;
         case 3:
@@ -39,7 +39,6 @@ int main()
             printf("Opção Inválida!");
         }
     }
-
 
     return 0;
 }
