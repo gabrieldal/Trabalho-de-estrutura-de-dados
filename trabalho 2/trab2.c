@@ -18,8 +18,10 @@ struct aluno *ordem_alfab(struct aluno *head)
     {
         abort();
     }
+    fflush(stdin);
     printf("Digite o nome do aluno: \n");
-    scanf("%s", &pont1->nome);
+    gets(pont1->nome);
+    fflush(stdin);
     printf("Digite a matricula do aluno: \n");
     scanf("%i", &pont1->matricula);
     printf("Digite a nota do aluno: \n");
@@ -60,4 +62,50 @@ void print_node(struct aluno *head)
         printf("*******************\n");
         pont1 = pont1->link;
     }
+}
+struct aluno *deletar(struct aluno *head)
+{
+    if (head == NULL)
+    {
+        printf("A lista esta vazia!\n");
+    }
+    else
+    {
+        struct aluno *pont2 = head;
+        struct aluno *pont1 = head;
+        char nome[40];
+        fflush(stdin);
+        printf("Digite o nome do aluno que deseja deletar: ");
+        gets(nome);
+        fflush(stdin);
+        if (strcmp(nome, head->nome) == 0)
+        {
+            head = head->link;
+            free(pont2);
+            free(pont1);
+            pont2 = NULL;
+            pont1 = NULL;
+            printf("\nDeletado!");
+        }
+        else
+        {
+            while (strcmp(nome, pont2->nome) != 0 && pont2->link != NULL)
+            {
+                pont1 = pont2;
+                pont2 = pont2->link;
+            }
+            if (strcmp(nome, pont2->nome) == 0)
+            {
+                pont1->link = pont2->link;
+                free(pont2);
+                pont2 = NULL;
+                printf("\nDeletado!\n");
+            }
+            else
+            {
+                printf("\nAluno inexistente.");
+            }
+        }
+    }
+    return head;
 }

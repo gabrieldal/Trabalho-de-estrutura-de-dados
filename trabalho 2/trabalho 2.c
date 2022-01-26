@@ -21,21 +21,23 @@ int main()
         switch (opc)
         {
         case 1:
-            for (int x = 0; x < 3; x++)
-            {
-                head = ordem_alfab(head);
-            }
+
+            head = ordem_alfab(head);
             break;
         case 2:
 
             print_node(head);
             break;
         case 3:
+
+            head = deletar(head);
             break;
         case 4:
+
             printf("\n ***SAINDO DO SISTEMA*** \n");
             break;
         default:
+        
             printf("Opção Inválida!");
         }
     }
